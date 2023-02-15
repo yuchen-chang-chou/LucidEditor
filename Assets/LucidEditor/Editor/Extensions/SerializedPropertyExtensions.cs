@@ -51,7 +51,7 @@ namespace AnnulusGames.LucidTools.Editor
                 }
             }
 
-            throw new ArgumentException($"Could not find the field or property of {nameof(property)}");
+            return null;
         }
 
         public static TAttribute[] GetAttributes<TAttribute>(this SerializedProperty property, bool inherit) where TAttribute : Attribute
@@ -83,7 +83,7 @@ namespace AnnulusGames.LucidTools.Editor
                 }
             }
 
-            throw new ArgumentException($"Could not find the field or property of {nameof(property)}");
+            return Array.Empty<TAttribute>();
         }
 
         public static float GetHeight(this SerializedProperty property)
